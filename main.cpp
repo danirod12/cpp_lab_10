@@ -20,10 +20,10 @@ int main() {
     std::cout << deck.size() << ", " << deck << std::endl;
 
     // 4 -1 3 2 0 1
-    std::cout << deck.pop_back() << " " << deck.pop_front() << " " << deck.pop_back();
-    std::cout << " " << deck.pop_back() << " " << deck.pop_front() << " " << deck.pop_back() << std::endl;
+    std::cout << deck.pop_back() << " " << deck.pop_front() << " " << deck.pop_back()
+              << " " << deck.pop_back() << " " << deck.pop_front() << " " << deck.pop_back() << std::endl;
 
-    // 0
+    // 0, []
     std::cout << deck.size() << ", " << deck << std::endl;
 
     try {
