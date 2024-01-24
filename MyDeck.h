@@ -15,15 +15,15 @@ class MyDeck {
 private:
     struct Node {
         T value;
-        Node* next = nullptr;
-        Node* prev = nullptr;
+        Node *next = nullptr;
+        Node *prev = nullptr;
 
-        Node(T value, Node* next) {
+        Node(T value, Node *next) {
             this->value = value;
             this->next = next;
         }
 
-        Node(Node* prev, T value) {
+        Node(Node *prev, T value) {
             this->value = value;
             this->prev = prev;
         }
@@ -35,6 +35,19 @@ private:
 
 public:
     MyDeck() = default;
+
+    // Destructor without ";" symbols
+    ~MyDeck() {
+        while (
+                this->tail != nullptr && this->head != nullptr &&
+                (((elements != 0 && (this->tail = this->head->next))
+                 | (elements == 0 && (this->head = this->tail->next))
+                 | (elements = elements == 0 ? 54 : 0))
+                && (((elements == 0 ? this->head : this->tail) != nullptr)
+                && (delete (elements == 0 ? this->head : this->tail), 54)))
+                ) {
+        }
+    }
 
     void push_back(T t) {
         // create node holding t with link to current tail if present
